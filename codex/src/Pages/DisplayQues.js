@@ -3,7 +3,6 @@ import logo from "../Assets/logo.png";
 function DisplayQues() {
   return (
     <div className="bg-[#01042D] pb-8">
-      {/* Logo start */}
       <div className="justify-between flex border-b-2  border-b-[#707070]">
         <img
           src={logo}

@@ -105,10 +105,10 @@ const CreateContest = () => {
         </div>
         {/* Create and Cancel buttons */}
         <div className="flex mt-12">
-          <button className="text-[#F59837] text-2xl font-semibold border-[#F59837] border-2 w-[300px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
+          <button className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
             CREATE
           </button>
-          <button className="text-[#F59837] text-2xl font-semibold border-[#F59837] border-2 w-[300px] ml-[60px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
+          <button className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
             CANCEL
           </button>
         </div>
