@@ -16,7 +16,7 @@ function DisplayQues() {
         <p>Leaderboard</p>
         <p>My Submissions</p>
       </div>
-      <div className="   p-4 mt-6">
+      <div className=" p-4 mt-6">
         <p className="text-4xl text-[#D68536] font-bold text-center">
           The XOR Problem
         </p>
