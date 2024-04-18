@@ -1,13 +1,14 @@
-import './App.css';
-import CreateContest from './Pages/CreateContest';
+import "./App.css";
+import CreateContest from "./pages/CreateContest";
+import Question from "./pages/Question";
 
 function App() {
   return (
     <div className="App">
-     <CreateContest/>
+      {/* <CreateContest /> */}
+      <Question />
     </div>
   );
 }
 
 export default App;
- 
