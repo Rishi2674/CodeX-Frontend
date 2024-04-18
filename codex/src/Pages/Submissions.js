@@ -6,7 +6,7 @@ const Submissions = () => {
       <div>
         <img
           src={logo}
-          className="px-3 h-12 py-2 mt-4 cursor-pointer hover:scale-105 duration-300 "
+          className="px-3 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
         />
       </div>
 

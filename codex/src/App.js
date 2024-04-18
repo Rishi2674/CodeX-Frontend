@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       {/* <CreateContest /> */}
-      {/* <DisplayQues /> */}
+      <DisplayQues />
       {/* <SubmitQues /> */}
-      <Submissions />
+      {/* <Submissions /> */}
     </div>
   );
 }

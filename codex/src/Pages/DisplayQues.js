@@ -6,7 +6,7 @@ function DisplayQues() {
       <div className="justify-between flex border-b-2  border-b-[#707070]">
         <img
           src={logo}
-          className="px-3 h-12 py-2 mt-4  cursor-pointer hover:scale-105 duration-300 "
+          className="px-3 h-12 py-2  cursor-pointer hover:scale-105 duration-300 "
         />
         <p className="text-[#F59837] pt-12 p-6 text-2xl">rishika_g31</p>
       </div>
