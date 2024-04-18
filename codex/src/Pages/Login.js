@@ -13,10 +13,10 @@ const login = () => {
           />
         </div>
         <div className="mt-4 pr-6">
-          <button className="text-white border-2 border-[#B64320]  rounded-lg px-6 py-1 mx-3">
+          <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
             HOME
           </button>
-          <button className="text-white border-2 border-[#B64320] rounded-lg px-6 py-1 mx-3">
+          <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
             SIGNUP
           </button>
         </div>
@@ -45,7 +45,7 @@ const login = () => {
               </div>
             </div>
             <div className="h-[20%] flex flex-col justify-end">
-              <button className="py-1 px-12 text-white bg-[#B64320] rounded-3xl text-xl">
+              <button className="py-1 px-12 text-white bg-[#B64320] rounded-3xl text-xl hover:scale-110 duration-300">
                 Login
               </button>
             </div>

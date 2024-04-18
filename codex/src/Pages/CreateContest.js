@@ -8,7 +8,7 @@ const CreateContest = () => {
       <div>
         <img
           src={logo}
-          className="px-3 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
+          className="px-4 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
         />
       </div>
       {/* Create Contest Header */}
@@ -104,7 +104,7 @@ const CreateContest = () => {
           </div>
         </div>
         {/* Create and Cancel buttons */}
-        <div className="flex mt-12">
+        <div className="flex mt-12 gap-8">
           <button className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
             CREATE
           </button>

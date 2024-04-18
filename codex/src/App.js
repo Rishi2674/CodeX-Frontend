@@ -16,8 +16,8 @@ function App() {
       {/* <SubmitQues /> */}
       {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
-      <Leaderboard />
-     {/* <Contest_Admin/> */}
+    {/* <Leaderboard /> */}
+     <Contest_Admin/>
       {/* <Leaderboard /> */}
       {/* <Login/> */}
     </div>
