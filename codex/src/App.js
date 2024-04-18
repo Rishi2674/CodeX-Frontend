@@ -1,16 +1,18 @@
 import "./App.css";
-import CreateContest from "./pages/CreateContest";
-import DisplayQues from "./pages/DisplayQues";
-import Submissions from "./pages/Submissions";
-import SubmitQues from "./pages/SubmitQues";
+import DisplayQues from "./Pages/DisplayQues";
+import Submissions from "./Pages/Submissions";
+import SubmitQues from "./Pages/SubmitQues";
+import Contest_Admin from "./Pages/Contest_Admin";
+import CreateContest from "./Pages/CreateContest";
 
 function App() {
   return (
     <div className="App">
       {/* <CreateContest /> */}
-      <DisplayQues />
+      {/* <DisplayQues /> */}
       {/* <SubmitQues /> */}
       {/* <Submissions /> */}
+      <Contest_Admin />
     </div>
   );
 }
