@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../Assets/logo.png";
 const Submissions = () => {
   return (
-    <div className="bg-[#01042D] h-screen">
+    <div className="bg-[#01042D] h-screen overflow-x-hidden overflow-scroll">
       <div>
         <img
           src={logo}
@@ -19,7 +19,8 @@ const Submissions = () => {
         <p className="text-5xl text-gray-300 font-semibold text-center">
           Submissions
         </p>
-        <div className="flex items-center justify-center mt-8 font-medium ">
+
+        <div className="flex items-center justify-center mt-8 font-medium  ">
           <div className="flex justify-center  rounded-lg p-1 bg-[#A55A0B] w-11/12  md:mt-2">
             <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
               <div className="flex justify-center">
@@ -109,7 +110,6 @@ const Submissions = () => {
             </div>
           </div>
         </div>
-
         <div className="flex items-center justify-center mt-1 ">
           <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
             <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
@@ -139,6 +139,7 @@ const Submissions = () => {
             </div>
           </div>
         </div>
+
         <div className="flex items-center justify-center mt-1 ">
           <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
             <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">

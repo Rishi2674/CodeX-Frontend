@@ -2,19 +2,21 @@ import React from "react";
 import logo from "../Assets/logo.png";
 function DisplayQues() {
   return (
-    <div className="bg-[#01042D] pb-8">
+    <div className="bg-[#01042D]  h-screen overflow-x-hidden overflow-scroll">
       <div className="justify-between flex border-b-2  border-b-[#707070]">
         <img
           src={logo}
           className="px-3 h-12 py-2  cursor-pointer hover:scale-105 duration-300 "
         />
-        <p className="text-[#F59837] pt-12 p-6 text-2xl">rishika_g31</p>
+        <p className="text-[#F59837] pt-12 p-6 text-2xl cursor-pointer">
+          rishika_g31
+        </p>
       </div>
       <div className=" rounded-lg justify-start gap-10 flex mx-8 mt-10 px-6 py-2 bg-[#282D36] text-[#F59837] text-[24px]">
-        <p>Problems</p>
-        <p>Submit</p>
-        <p>Leaderboard</p>
-        <p>My Submissions</p>
+        <p className="cursor-pointer">Problems</p>
+        <p className="cursor-pointer">Submit</p>
+        <p className="cursor-pointer">Leaderboard</p>
+        <p className="cursor-pointer">My Submissions</p>
       </div>
       <div className=" p-4 mt-6">
         <p className="text-4xl text-[#D68536] font-bold text-center">

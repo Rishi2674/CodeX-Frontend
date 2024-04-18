@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       {/* <CreateContest /> */}
-      {/* <DisplayQues /> */}
+      <DisplayQues />
       {/* <SubmitQues /> */}
       {/* <Submissions /> */}
-      <Contest_Admin />
+      {/* <Contest_Admin /> */}
     </div>
   );
 }
