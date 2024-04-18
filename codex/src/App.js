@@ -5,6 +5,8 @@ import SubmitQues from "./Pages/SubmitQues";
 import Contest_Admin from "./Pages/Contest_Admin";
 import CreateContest from "./Pages/CreateContest";
 import Leaderboard from "./Pages/Leaderboard";
+import { FiLogIn } from "react-icons/fi";
+import Login from "./Pages/Login"
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       {/* <SubmitQues /> */}
       {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
-      <Leaderboard />
+      {/* <Leaderboard /> */}
+      <Login/>
     </div>
   );
 }
