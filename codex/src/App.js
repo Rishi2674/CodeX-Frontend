@@ -1,34 +1,20 @@
-<<<<<<< Updated upstream
 import "./App.css";
-import CreateContest from "./pages/CreateContest";
-import DisplayQues from "./pages/DisplayQues";
-import Submissions from "./pages/Submissions";
-import SubmitQues from "./pages/SubmitQues";
-=======
-import './App.css';
+import DisplayQues from "./Pages/DisplayQues";
+import Submissions from "./Pages/Submissions";
+import SubmitQues from "./Pages/SubmitQues";
 import Contest_Admin from './Pages/Contest_Admin';
 import CreateContest from './Pages/CreateContest';
->>>>>>> Stashed changes
 
 function App() {
   return (
     <div className="App">
-<<<<<<< Updated upstream
       {/* <CreateContest /> */}
       {/* <DisplayQues /> */}
-      {/* <SubmitQues /> */}
-      <Submissions />
-=======
-     {/* <CreateContest/> */}
-     <Contest_Admin/>
->>>>>>> Stashed changes
+      <SubmitQues />
+      {/* <Submissions /> */}
+     {/* <Contest_Admin/> */}
     </div>
   );
 }
 
 export default App;
-<<<<<<< Updated upstream
-=======
-
- 
->>>>>>> Stashed changes
