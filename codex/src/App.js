@@ -1,12 +1,12 @@
 import "./App.css";
 import CreateContest from "./pages/CreateContest";
-import Question from "./pages/Question";
+import DisplayQues from "./pages/DisplayQues";
 
 function App() {
   return (
     <div className="App">
       {/* <CreateContest /> */}
-      <Question />
+      <DisplayQues />
     </div>
   );
 }

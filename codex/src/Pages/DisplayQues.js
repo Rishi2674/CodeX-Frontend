@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../Assets/logo.png";
-function Question() {
+function DisplayQues() {
   return (
     <div className="bg-[#01042D] pb-8">
       {/* Logo start */}
@@ -111,4 +111,4 @@ function Question() {
   );
 }
 
-export default Question;
+export default DisplayQues;
