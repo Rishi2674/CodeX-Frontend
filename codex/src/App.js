@@ -15,6 +15,7 @@ function App() {
       {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
       <Leaderboard />
+     {/* <Contest_Admin/> */}
     </div>
   );
 }
