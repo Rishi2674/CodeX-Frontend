@@ -28,70 +28,70 @@ const Mcq = () => {
           ratio.
         </div>
         <div className="p-8 text-xl">
-          <ul class="text-[#D68536] h-[27rem]">
-            <li class="">
-              <div class="flex items-center ps-3">
+          <ul className="text-[#D68536] h-[27rem]">
+            <li className="">
+              <div className="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  class="w-4 h-4"
+                  className="w-4 h-4"
                 />
                 <label
                   for="list-radio-license"
-                  class=" pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  className=" pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
                 >
                   12 34 12 43
                 </label>
               </div>
             </li>
-            <li class="w-full rounded-t-lg ">
-              <div class="flex items-center ps-3">
+            <li className="w-full rounded-t-lg ">
+              <div className="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  class="w-4 h-4 text-[#D68536] border-[#D68536] "
+                  className="w-4 h-4 text-[#D68536] border-[#D68536] "
                 />
                 <label
                   for="list-radio-license"
-                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
                 >
                   23 64 72 13
                 </label>
               </div>
             </li>
-            <li class="w-full  rounded-t-lg ">
-              <div class="flex items-center ps-3">
+            <li className="w-full  rounded-t-lg ">
+              <div className="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  class="w-4 h-4 text-[#D68536] border-[#D68536]"
+                  className="w-4 h-4 text-[#D68536] border-[#D68536]"
                 />
                 <label
                   for="list-radio-license"
-                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
                 >
                   22 34 19 4
                 </label>
               </div>
             </li>
-            <li class="w-full =rounded-t-lg ">
-              <div class="flex items-center ps-3">
+            <li className="w-full =rounded-t-lg ">
+              <div className="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  class="w-4 h-4 text-[#D68536]"
+                  className="w-4 h-4 text-[#D68536]"
                 />
                 <label
                   for="list-radio-license"
-                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
                 >
                   8 12 92 18
                 </label>
