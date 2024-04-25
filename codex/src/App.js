@@ -7,6 +7,7 @@ import CreateContest from "./Pages/CreateContest";
 import Leaderboard from "./Pages/Leaderboard";
 import { FiLogIn } from "react-icons/fi";
 import Login from "./Pages/Login";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* <CreateContest /> */}
       {/* <DisplayQues /> */}
       {/* <SubmitQues /> */}
-      <Submissions />
+      {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
     {/* <Leaderboard /> */}
      <Contest_Admin/>
@@ -22,6 +23,7 @@ function App() {
       {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
       {/* <Login /> */}
+      <LandingPage/>
     </div>
   );
 }
