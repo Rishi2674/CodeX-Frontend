@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from '../Assets/logo.png'
+import banner from '../Assets/Login_banner.png'
 
 function SignUp() {
   return (
@@ -7,7 +9,7 @@ function SignUp() {
         <div>
           <img
             src={logo}
-            className="pr-3 pl-5 h-14 pt-4 cursor-pointer hover:scale-105 duration-300 "
+            className="pr-3 pl-5 h-12 w-26 pt-4 cursor-pointer hover:scale-105 duration-300 "
           />
         </div>
         <div className="mt-4 pr-6">
@@ -15,39 +17,60 @@ function SignUp() {
             HOME
           </button>
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
-            LOGIN
+              LOGIN
           </button>
         </div>
       </div>
       <div className="bg-[#1B263B] h-[75%] my-[3rem] mx-[12rem] rounded-2xl flex flex-col items-center">
         <div className="text-[2.7rem] text-white mt-2">SIGNUP</div>
         <div className="flex items-center justify-center w-full my-7">
-          <div className="flex flex-col items-center w-[50%] justify-around h-[100%] border-r-2 border-[#A1A1A1] px-4 py-6 pt-14">
-            <div className="flex flex-col w-full items-center justify-around h-[80%]">
-              <input
-                placeholder="E-mail/Phone"
-                className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center"
-              />
-              <div className="w-full flex flex-col justify-center items-center gap-[1rem]">
+          <form
+             className='w-[50%]'
+          >
+            <div className="flex flex-col items-center w-full justify-around h-[100%] border-r-2 border-[#A1A1A1] px-4 py-6 pt-14">
+              <div className="flex flex-col w-full  items-center justify-around h-[80%]">
                 <input
-                  placeholder="Password"
-                  className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center"
+                  placeholder="Name"
+                  type='text'
+                  className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center focus:outline-none"
                 />
-                <div className=" text-white w-[75%]">
-                  By proceeding, You agree with our{" "}
-                  <span className="text-[#FFA900]">
-                    {" "}
-                    <a className='hover:underline cursor-pointer'> Terms of Service <span className='text-white'>&</span> Conditions</a>
-                  </span>
+                <div className="w-full flex flex-col justify-center items-center ">
+                  <input
+                    placeholder="johndoe@example.com"
+                    type="email"
+                   
+                    className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center mt-8 focus:outline-none"
+                  />
+                  <input
+                    placeholder="Phone "
+                    type='text'
+                    
+                    className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center mt-8 focus:outline-none"
+                  />
+                  <input
+                    placeholder="Password"
+                    type='password'
+                   
+                    className="w-[75%] bg-[#1B263B] text-[#A1A1A1] border-0 border-b-2 border-[#A1A1A1] placeholder:text-[#A1A1A1] text-xl placeholder:text-2xl placeholder:text-center mt-8 focus:outline-none"
+                  />
+                  <div className=" text-white w-[75%] mt-4">
+                    By proceeding, You agree with our{" "}
+                    <span className="text-[#FFA900]">
+                      {" "}
+                      <a className='hover:underline cursor-pointer'> Terms of Service <span className='text-white'>&</span> Conditions</a>
+                    </span>
+                  </div>
                 </div>
               </div>
+              <div className="h-[20%] flex flex-col justify-end mt-4">
+                <button
+                  type='submit'
+                  className="py-1 px-12 text-white bg-[#B64320] rounded-3xl text-xl hover:scale-110 duration-300">
+                  SIGNUP
+                </button>
+              </div>
             </div>
-            <div className="h-[20%] flex flex-col justify-end">
-              <button className="py-1 px-12 text-white bg-[#B64320] rounded-3xl text-xl hover:scale-110 duration-300">
-                SignUp
-              </button>
-            </div>
-          </div>
+          </form>
           <div className="w-[50%] flex justify-center items-center">
             <img src={banner} />
           </div>
