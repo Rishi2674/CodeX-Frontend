@@ -21,6 +21,7 @@ const login = () => {
           </button>
         </div>
       </div>
+      <form>
       <div className="bg-[#1B263B] h-[75%] my-[3rem] mx-[12rem] rounded-2xl flex flex-col items-center">
         <div className="text-[2.7rem] text-white mt-2">LOGIN</div>
         <div className="flex items-center justify-center w-full my-7">
@@ -46,7 +47,7 @@ const login = () => {
             </div>
             <div className="h-[20%] flex flex-col justify-end">
               <button className="py-1 px-12 text-white bg-[#B64320] rounded-3xl text-xl hover:scale-110 duration-300">
-                Login
+                LOGIN
               </button>
             </div>
           </div>
@@ -55,6 +56,7 @@ const login = () => {
           </div>
         </div>
       </div>
+      </form>
     </div>
   );
 }

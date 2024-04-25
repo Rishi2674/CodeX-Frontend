@@ -8,6 +8,8 @@ import Leaderboard from "./Pages/Leaderboard";
 import { FiLogIn } from "react-icons/fi";
 import Login from "./Pages/Login";
 import UserPage from "./Pages/UserPage";
+import LandingPage from "./Pages/LandingPage";
+import SignUp from "./Pages/SignUp";
 
 function App() {
   return (
@@ -18,12 +20,14 @@ function App() {
       {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
       {/* <Leaderboard /> */}
-      {/* <Contest_Admin /> */}
+      {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
       {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
       {/* <Login /> */}
       <UserPage />
+      {/* <SignUp/> */}
+      {/* <LandingPage /> */}
     </div>
   );
 }
