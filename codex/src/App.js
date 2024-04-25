@@ -16,11 +16,8 @@ function App() {
       {/* <SubmitQues /> */}
       <Submissions />
       {/* <Contest_Admin /> */}
-<<<<<<< HEAD
     {/* <Leaderboard /> */}
      <Contest_Admin/>
-=======
->>>>>>> b18c58b22fdad71c84b5b0f5f478cb33c4c49645
       {/* <Leaderboard /> */}
       {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
