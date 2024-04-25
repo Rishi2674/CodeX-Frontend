@@ -14,17 +14,14 @@ function App() {
       {/* <CreateContest /> */}
       {/* <DisplayQues /> */}
       {/* <SubmitQues /> */}
-      <Submissions />
+      {/* <Submissions /> */}
       {/* <Contest_Admin /> */}
-<<<<<<< HEAD
     {/* <Leaderboard /> */}
-     <Contest_Admin/>
-=======
->>>>>>> b18c58b22fdad71c84b5b0f5f478cb33c4c49645
+     {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
       {/* <Contest_Admin/> */}
       {/* <Leaderboard /> */}
-      {/* <Login /> */}
+      {/* <Login/> */}
     </div>
   );
 }
