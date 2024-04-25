@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../Assets/logo.png'
 import landing from '../Assets/landing.png'
+import { Link } from 'react-router-dom'
 
 
 export default function LandingPage() {
@@ -16,10 +17,14 @@ export default function LandingPage() {
         </div>
         <div className="mt-4 pr-6">
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
+            <Link to='/login'>
             LOGIN
+            </Link>
           </button>
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
+            <Link to='/register'>
             SIGNUP
+            </Link>
           </button>
         </div>
       </div>
@@ -46,7 +51,7 @@ export default function LandingPage() {
                 </div>
                 {/*Get started button  */}
                 <div className='flex justify-end mt-6 mr-2'>
-                    <button className='bg-[#FF7659] p-2 w-1/2 font-semibold'>
+                    <button className='bg-[#FF7659] p-2 w-1/2 font-semibold hover:scale-105 duration-300'>
                       Get Started !
                     </button>
                 </div>
@@ -55,12 +60,12 @@ export default function LandingPage() {
               <div className='w-1/3 p-1'>
 
                 <div className='flex justify-start mt-12'>
-                <button className='bg-[#FF7659] p-2 w-1/2 font-semibold'>
+                <button className='bg-[#FF7659] p-2 w-1/2 font-semibold hover:scale-105 duration-300'>
                       Contestant
                     </button>
                 </div>
                 <div className='flex justify-start mt-8'>
-                <button className='bg-transparent text-[#E0E1DD] border-[#E0E1DD] border-[1px] p-2 w-1/2 font-semibold'>
+                <button className='bg-transparent text-[#E0E1DD] border-[#E0E1DD] border-[1px] p-2 w-1/2 font-semibold hover:scale-105 duration-300'>
                       Organiser
                     </button>
                 </div>
@@ -70,7 +75,7 @@ export default function LandingPage() {
           </div>
       </div>
       {/* footer */}
-      <div className='h-[7.5rem] bg-[#010112] mt-[2rem]'>
+      <div className='h-[126px] bg-[#010112] mt-[2rem]'>
       <div className='flex-col'>
       <div className='flex justify-center '>
           <img

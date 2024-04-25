@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../Assets/logo.png'
 import banner from '../Assets/Login_banner.png'
+import { Link } from 'react-router-dom'
 
 function SignUp() {
   return (
@@ -14,10 +15,14 @@ function SignUp() {
         </div>
         <div className="mt-4 pr-6">
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
+            <Link to='/'>
             HOME
+            </Link>
           </button>
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
+            <Link to='/login'>
               LOGIN
+              </Link>
           </button>
         </div>
       </div>
