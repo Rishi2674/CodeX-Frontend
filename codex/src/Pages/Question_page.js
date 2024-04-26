@@ -98,7 +98,7 @@ const Question_page = () => {
                     className="bg-[#22243E] w-[80%] h-12 border-[1px] border-[#F59837] px-2 text-[#a2a2a2]"
                     placeholder="Pick A Title"
                     required
-                    onChange={(e) => Settitle(e.target.value)}
+                    onChange={(e) => Settitle(parseInt(e.target.value))}
                   />
                 </div>
                 <div>
@@ -109,7 +109,7 @@ const Question_page = () => {
                     className="bg-[#22243E] w-[80%] h-12 border-[1px] border-[#F59837] px-2 text-[#a2a2a2]"
                     placeholder="Write Your Problem Statement"
                     required
-                    onChange={(e) => Setdescription(e.target.value)}
+                    onChange={(e) => Setdescription(parseInt(e.target.value))}
                   />
                 </div>
                 <div>
@@ -121,7 +121,7 @@ const Question_page = () => {
                     placeholder="Set Difficulty"
                     required
                     type="number"
-                    onChange={(e) => Setdifficulty(e.target.value)}
+                    onChange={(e) => Setdifficulty(parseInt(e.target.value))}
                   />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ const Question_page = () => {
                     placeholder="Give Input as No. of Seconds"
                     type="number"
                     required
-                    onChange={(e) => Settimelimit(e.target.value)}
+                    onChange={(e) => Settimelimit(parseInt(e.target.value))}
                   />
                 </div>
                 <div>
@@ -145,7 +145,7 @@ const Question_page = () => {
                     placeholder="Give Input as No. of MB"
                     type="number"
                     required
-                    onChange={(e) => Setmemorylimit(e.target.value)}
+                    onChange={(e) => Setmemorylimit(parseInt(e.target.value))}
                   />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ const Question_page = () => {
                     placeholder="Set Points"
                     type="number"
                     required
-                    onChange={(e) => Setpoints(e.target.value)}
+                    onChange={(e) => Setpoints(parseInt(e.target.value))}
                   />
                 </div>
               </div>
