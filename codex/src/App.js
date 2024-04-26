@@ -15,6 +15,7 @@ import Mcq from "./Pages/Mcq";
 import Essay from "./Pages/Essay";
 import Test_case_card from "./Pages/Test_case_card";
 import InputEssay from "./Pages/InputEssay";
+import InputMcq from "./Pages/InputMcq";
 
 function App() {
   return (

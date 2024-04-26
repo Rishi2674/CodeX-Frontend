@@ -18,7 +18,7 @@ const InputEssay = () => {
         <div className="text-[#F59837] text-2xl mb-1 mt-8 px-3">Max Point*</div>
         <input
           className="bg-[#22243E] w-[20%] h-12 border-[1px] border-[#F59837] px-3 text-[#a2a2a2] mt-4 mx-3 "
-          placeholder=""
+          placeholder="50"
           required
         />
       </div>
