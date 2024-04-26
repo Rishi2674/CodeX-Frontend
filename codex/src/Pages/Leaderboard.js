@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
 import axios from "axios"
+import { ContestContext } from "./ContestContextProvider";
+
 const Leaderboard = () => {
   const [leaderboard,setLeaderbaord]=useState([]);
+  const [contest,setContest] = useContext(ContestContext);
   useEffect(()=>{
     axios.get("http://localhost:6969/api/leaderboard/").then(response=>{
       setLeaderbaord(response.data.leaderboard)
@@ -22,7 +25,7 @@ const Leaderboard = () => {
 
       <div className="mt-3">
         <div className="text-5xl text-[#D68536] font-bold p-4 border-b-2 border-b-[#707070]">
-          Hack The Interview V
+          Hack The interview
         </div>
       </div>
       <div className=" p-4 mt-6">

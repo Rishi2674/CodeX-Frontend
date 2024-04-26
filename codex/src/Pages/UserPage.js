@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../Assets/logo.png";
 import { CgMenuCheese } from "react-icons/cg";
 import { MdLeaderboard } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ContestContext } from "./ContestContextProvider";
+
 const UserPage = () => {
+  const [contest,setContest] = useContext(ContestContext);
+  console.log("contest",contest)
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
@@ -15,7 +19,7 @@ const UserPage = () => {
 
       <div className="mt-3">
         <div className="text-5xl text-[#D68536] font-bold p-4 border-b-2 border-b-[#707070]">
-          Hack The Interview V
+          Hack The interview
         </div>
       </div>
 

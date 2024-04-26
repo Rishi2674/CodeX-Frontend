@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { ContestContext } from "./ContestContextProvider";
+
 const Submissions = () => {
+  const [contest,setContest] = useContext(ContestContext);
   const [submissions,setSubmissions]=useState([])
   useEffect(()=>{
     axios.get("http://localhost:6969/api/submission").then(response=>{
@@ -23,7 +26,7 @@ const Submissions = () => {
 
       <div className="mt-3">
         <div className="text-5xl text-[#D68536] font-bold p-4 border-b-2 border-b-[#707070]">
-          Hack The Interview V
+          Hack The Interview
         </div>
       </div>
       <div className=" p-4 mt-6">
