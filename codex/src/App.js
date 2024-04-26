@@ -40,7 +40,7 @@ function App() {
       {/* <UserPage /> */}
       {/* <Contest_Admin /> */}
       {/* <InputEssay /> */}
-      <Question_page/>
+      {/* <Question_page/> */}
     </>
   );
 }

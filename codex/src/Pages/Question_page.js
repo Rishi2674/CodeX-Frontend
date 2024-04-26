@@ -25,6 +25,9 @@ const Question_page = () => {
   const SetQuestion = (event)=>{
     event.preventDefault();
     Setdifficulty(parseInt(difficulty));
+    Settimelimit(parseInt(timelimit));
+    Setmemorylimit(parseInt(memorylimit));
+    Setpoints(parseInt(points));
     const body = {
         title:title,
         description:description,
@@ -48,9 +51,10 @@ const Question_page = () => {
         .then((res) => {
           console.log("okay")
           console.log(res);
-          console.log(res.status);
-          if(res.status>=200 && res.status<=300){
+          console.log(res.success);
+          if(res.success===true){
             console.log("okay11");
+            plusOne();
           }else{
             console.log("11");
           }
