@@ -3,7 +3,7 @@ import logo from "../Assets/logo.png";
 import { MdEdit } from "react-icons/md";
 import { IoCalendarClear } from "react-icons/io5";
 import { FaLastfm, FaPlus } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const Contest_Admin = () => {
   const [ifBold1, setIfBold1] = useState("D68536");
   const [ifBold2, setIfBold2] = useState("B49372");

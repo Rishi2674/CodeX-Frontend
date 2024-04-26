@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../Assets/logo.png";
 import { CgMenuCheese } from "react-icons/cg";
 import { MdLeaderboard } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 const UserPage = () => {
   return (
     <div className="bg-[#01042D] h-screen ">
@@ -23,13 +23,17 @@ const UserPage = () => {
         <div className="pr-36 cursor-pointer flex border-r-2 border-b-[#302d2d]">
           Current Rank: N/A
         </div>
-        <div className=" pr-36 cursor-pointer flex border-r-2 border-b-[#302d2d]">
-          <MdLeaderboard size={25} className="mr-2 mt-1" />
-          Leaderboard
-        </div>
-        <div className="cursor-pointer flex">
-          <CgMenuCheese size={25} className="mr-2 mt-1" /> Sumbissions
-        </div>
+        <Link to="/leaderboard">
+          <div className=" pr-36 cursor-pointer flex border-r-2 border-b-[#302d2d]">
+            <MdLeaderboard size={25} className="mr-2 mt-1" />
+            Leaderboard
+          </div>
+        </Link>
+        <link to="/submissions">
+          <div className="cursor-pointer flex">
+            <CgMenuCheese size={25} className="mr-2 mt-1" /> Sumbissions
+          </div>
+        </link>
       </div>
       <div className="text-2xl w-2/3 mx-8 flex  mt-6 text-gray-400 font-semibold justify-between">
         <p>Challenges</p>
@@ -54,9 +58,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solve challenge </div>
-              </button>
+              <link to="/question">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>
@@ -77,9 +83,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solve challenge </div>
-              </button>
+              <link to="/question">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>
@@ -100,9 +108,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="border-[1px] border-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solved </div>
-              </button>
+              <link to="/question">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>
@@ -122,9 +132,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="border-[1px] border-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solved </div>
-              </button>
+              <link to="/mcq">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>
@@ -145,9 +157,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="border-[1px] border-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solved </div>
-              </button>
+              <link to="/mcq">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>
@@ -169,9 +183,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <button className="border-[1px] border-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                <div className="text-[#aaaaaa]  ">Solved </div>
-              </button>
+              <link to="/essay">
+                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
+                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
+                </button>
+              </link>
             </div>
           </div>
         </div>

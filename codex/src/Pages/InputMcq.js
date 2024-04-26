@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
 const InputMcq = () => {
   return (
     <div className="bg-[#01042D] h-screen pb-4 ">

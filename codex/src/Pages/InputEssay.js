@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
 const InputEssay = () => {
   return (
     <div className="bg-[#01042D] h-screen ">

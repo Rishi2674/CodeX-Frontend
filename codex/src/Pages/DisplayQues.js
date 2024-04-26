@@ -1,22 +1,33 @@
 import React from "react";
 import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
 function DisplayQues() {
   return (
     <div className="bg-[#01042D]  h-screen overflow-x-hidden overflow-scroll">
       <div className="justify-between flex border-b-2  border-b-[#707070]">
-        <img
-          src={logo}
-          className="px-3 h-12 py-2  cursor-pointer hover:scale-105 duration-300 "
-        />
+        <Link to="/contest">
+          <img
+            src={logo}
+            className="px-3 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
+          />
+        </Link>
         <p className="text-[#F59837] pt-12 p-6 text-2xl cursor-pointer">
           rishika_g31
         </p>
       </div>
       <div className=" rounded-lg justify-start gap-10 flex mx-8 mt-10 px-6 py-2 bg-[#282D36] text-[#F59837] text-[24px]">
-        <p className="cursor-pointer">Problems</p>
-        <p className="cursor-pointer">Submit</p>
-        <p className="cursor-pointer">Leaderboard</p>
-        <p className="cursor-pointer">My Submissions</p>
+        <link to="/contest">
+          <p className="cursor-pointer">Problems</p>
+        </link>
+        <link to="/submitques">
+          <p className="cursor-pointer">Submit</p>
+        </link>
+        <link to="/leaderboard">
+          <p className="cursor-pointer">Leaderboard</p>
+        </link>
+        <link to="/submissions">
+          <p className="cursor-pointer">My Submissions</p>
+        </link>
       </div>
       <div className=" p-4 mt-6">
         <p className="text-4xl text-[#D68536] font-bold text-center">

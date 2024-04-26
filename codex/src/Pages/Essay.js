@@ -1,13 +1,16 @@
 import React from "react";
 import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
 const Essay = () => {
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
-        <img
-          src={logo}
-          className="px-3 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
-        />
+        <Link to="/contest">
+          <img
+            src={logo}
+            className="px-3 h-12 py-2 cursor-pointer hover:scale-105 duration-300 "
+          />
+        </Link>
       </div>
 
       <div className="mt-3">
@@ -34,6 +37,7 @@ const Essay = () => {
           />
         </div>
       </div>
+
       <button className="text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837] hover:scale-110 duration-300 hover:bg-[#22243E] mr-40 mx-3 mt-4">
         Submit
       </button>
