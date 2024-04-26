@@ -9,19 +9,22 @@ import { FiLogIn } from "react-icons/fi";
 import Login from "./Pages/Login";
 import UserPage from "./Pages/UserPage";
 import LandingPage from "./Pages/LandingPage";
-import SignUp from "./Pages/SignUp"; 
+import SignUp from "./Pages/SignUp";
 import { Routes, Route } from "react-router-dom";
-import Mcq from './Pages/Mcq'
+import Mcq from "./Pages/Mcq";
+import Essay from "./Pages/Essay";
 
 function App() {
   return (
     <>
-      <Routes>
-      <Route exact path = '/' element = {<LandingPage/>} />
-      <Route exact path = '/login' element = {<Login />} />
-      <Route exact path = '/register' element = {<SignUp/>}/>
-    </Routes>
-      <Mcq />
+      {/* <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<SignUp />} />
+      </Routes> */}
+      {/* <Mcq /> */}
+      {/* <UserPage /> */}
+      <Essay />
     </>
   );
 }
