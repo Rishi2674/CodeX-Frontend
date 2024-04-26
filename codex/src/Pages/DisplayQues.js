@@ -26,6 +26,8 @@ function DisplayQues() {
           <p className="cursor-pointer">Leaderboard</p>
         </Link>
         <Link to="/submissions">
+        </Link>
+        <Link to="/submissions">
           <p className="cursor-pointer">My Submissions</p>
         </Link>
       </div>
