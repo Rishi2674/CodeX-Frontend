@@ -110,15 +110,17 @@ console.log("contest",contest)
         // problem section start
         <div className="p-3">
           {/* add problem button */}
-          <button className=" bg-[#B64320] rounded-md mt-3 hover:scale-105 duration-300 mx-3">
-            <div className="flex items-center px-3 py-1 gap-1">
-              <div className="text-[#D6D6D7] text-base">
-                {" "}
-                <FaPlus />{" "}
+          <Link to="/choose">
+            <button className=" bg-[#B64320] rounded-md mt-3 hover:scale-105 duration-300 mx-3">
+              <div className="flex items-center px-3 py-1 gap-1">
+                <div className="text-[#D6D6D7] text-base">
+                  {" "}
+                  <FaPlus />{" "}
+                </div>
+                <div className="text-[#D6D6D7] text-base">Add Problem</div>
               </div>
-              <div className="text-[#D6D6D7] text-base">Add Problem</div>
-            </div>
-          </button>
+            </button>
+          </Link>
           {/* view questions option */}
           <div className="flex-col h-[300px] overflow-scroll mt-3 overflow-x-hidden">
             {/* each questio card */}

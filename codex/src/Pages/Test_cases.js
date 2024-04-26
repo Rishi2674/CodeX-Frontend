@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Test_case_card from "./Test_case_card";
 import { Link } from "react-router-dom";
-const Test_cases = () => {
+const Test_cases = ({id}) => {
   const [showMyModel, setShowMyModal] = useState(false);
   const handleOnClose = () => setShowMyModal(false);
   return (
@@ -17,35 +17,11 @@ const Test_cases = () => {
           onClick={() => setShowMyModal(true)}
           className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
         >
-          Test case 1
-        </button>
-        <button
-          onClick={() => setShowMyModal(true)}
-          className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
-        >
-          Test case 2
-        </button>
-        <button
-          onClick={() => setShowMyModal(true)}
-          className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
-        >
-          Test case 3
-        </button>
-        <button
-          onClick={() => setShowMyModal(true)}
-          className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
-        >
-          Test case 4
-        </button>
-        <button
-          onClick={() => setShowMyModal(true)}
-          className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
-        >
-          Test case 5
+          + Test case 
         </button>
       </div>
       {/* <Example_card onClose={handleOnClose} visible={showMyModel} /> */}
-      <Test_case_card onClose={handleOnClose} visible={showMyModel} />
+      <Test_case_card onClose={handleOnClose} visible={showMyModel} id={id} />
     </div>
   );
 };

@@ -51,16 +51,16 @@ function SignUp() {
           />
         </div>
         <div className="mt-4 pr-6">
-          <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
             <Link to='/'>
-            HOME
-            </Link>
-          </button>
           <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
-            <Link to='/login'>
-              LOGIN
-              </Link>
+            HOME
           </button>
+            </Link>
+            <Link to='/login'>
+          <button className="text-white border-2 border-[#B64320] hover:scale-110 duration-300 rounded-lg px-6 py-1 mx-3">
+              LOGIN
+          </button>
+              </Link>
         </div>
       </div>
       <div className="bg-[#1B263B] h-[75%] my-[3rem] mx-[12rem] rounded-2xl flex flex-col items-center">

@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/create" element={<CreateContest />} />
         <Route exact path="/admin" element={<Contest_Admin />} />
         <Route exact path="/contest" element={<UserPage />} />
-        <Route exact path="/question" element={<DisplayQues />} />
+        <Route path="/question/:id" element={<DisplayQues />} />
         <Route exact path="/leaderboard" element={<Leaderboard />} />
         <Route exact path="/submissions" element={<Submissions />} />
         <Route exact path="/submitques" element={<SubmitQues />} />
