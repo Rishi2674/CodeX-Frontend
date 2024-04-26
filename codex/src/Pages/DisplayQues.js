@@ -16,18 +16,18 @@ function DisplayQues() {
         </p>
       </div>
       <div className=" rounded-lg justify-start gap-10 flex mx-8 mt-10 px-6 py-2 bg-[#282D36] text-[#F59837] text-[24px]">
-        <link to="/contest">
+        <Link to="/contest">
           <p className="cursor-pointer">Problems</p>
-        </link>
-        <link to="/submitques">
+        </Link>
+        <Link to="/submitques">
           <p className="cursor-pointer">Submit</p>
-        </link>
-        <link to="/leaderboard">
+        </Link>
+        <Link to="/leaderboard">
           <p className="cursor-pointer">Leaderboard</p>
-        </link>
-        <link to="/submissions">
+        </Link>
+        <Link to="/submissions">
           <p className="cursor-pointer">My Submissions</p>
-        </link>
+        </Link>
       </div>
       <div className=" p-4 mt-6">
         <p className="text-4xl text-[#D68536] font-bold text-center">
