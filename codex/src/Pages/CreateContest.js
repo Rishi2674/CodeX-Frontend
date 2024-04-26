@@ -7,8 +7,8 @@ const CreateContest = () => {
   const [name,setName] = useState("");
   const [date,setDate] = useState(Date.now());
   const [duration, setDuration] = useState("");
-  const [starttime, setStarttime] = useState("");
-  const [endtime, setEndtime] = useState("");
+  const [starttime, setStarttime] = useState(null);
+  const [endtime, setEndtime] = useState(null);
   const [guidelines, setGuidelines] = useState("");
 
   const handleSubmit = async(e) =>{
@@ -21,6 +21,7 @@ const CreateContest = () => {
       date: date,
     }
     const token= localStorage.getItem("jwt");
+
      try {
       await fetch('http://localhost:6969/api/contest',
       {
@@ -33,6 +34,7 @@ const CreateContest = () => {
       })
       .then(res=>res.json()).then((result)=>{
           console.log(result);
+          console.log("success in creation")
           window.location.replace('/admin')
       })
      } catch (error) {
@@ -160,7 +162,7 @@ const CreateContest = () => {
               type="text"
               required
               onChange={(e)=>{
-                setEndtime(e.target.value)
+                setGuidelines(e.target.value)
               }}
               placeholder="Enter the guidelines for contest"
               className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-2/3 rounded-lg p-2 border-none text-[#B49372] h-10"

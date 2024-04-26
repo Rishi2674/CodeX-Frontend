@@ -34,7 +34,7 @@ function SignUp() {
           console.log(result);
           console.log(result.token);
                 localStorage.setItem('jwt',result.token);
-          // window.location.replace('/')
+          window.location.replace('/login')
         })
     } catch (error) {
       console.log("error", error);

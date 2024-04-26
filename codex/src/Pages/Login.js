@@ -6,6 +6,9 @@ import { useState } from 'react';
 
 function Login() {
 
+  const admin_email = "devamydesai@gmail.com";
+  const admin_password = "dd2904";
+
   const [email, setEmail] = useState(" ");
   const [password,setPassword] = useState(" ");
   
@@ -28,7 +31,14 @@ function Login() {
             .then(res=>res.json()).then((result)=>{
                 console.log(result);
                 localStorage.setItem('jwt',result.token);
-                //window.href.replace('/')
+                if(data.email===admin_email && data.password===admin_password){
+                  window.location.replace('/create')
+                }
+                else{
+                  console.log("here")
+                  window.location.replace('/contest')
+                }
+                
             })
     } catch (error) {
             console.log("error",error);
