@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../Assets/logo.png";
 import { MdEdit } from "react-icons/md";
 import { IoCalendarClear } from "react-icons/io5";
 import { FaLastfm, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ContestContext } from "./ContestContextProvider";
+
 const Contest_Admin = () => {
   const [ifBold1, setIfBold1] = useState("D68536");
   const [ifBold2, setIfBold2] = useState("B49372");
   const [ifBold3, setIfBold3] = useState("B49372");
   const [status, setStatus] = useState("problem");
+  const [contest,setContest] = useContext(ContestContext);
+
+
 
   const handleProblemChange = () => {
     setIfBold1("D68536");
@@ -52,10 +57,10 @@ const Contest_Admin = () => {
       {/* Heading */}
       <div className="flex justify-between   items-center p-3 mt-6">
         <div className="text-[#D68536] text-4xl font-bold">
-          Hack The Interview
+          {contest.title}
         </div>
         <div className="text-[#B49372] text-2xl font-semibold ">
-          15 Days Left
+          {contest.date - Date.now()}
         </div>
       </div>
       {/* Date and Calender Time */}
@@ -63,17 +68,17 @@ const Contest_Admin = () => {
         <div className="text-[#D68536] text-4xl font-bold">
           <IoCalendarClear />
         </div>
-        <div className="text-[#B49372] text-2xl font-bold ml-2">08/10/24</div>
+        <div className="text-[#B49372] text-2xl font-bold ml-2">{contest.date.split("T")[0]}</div>
       </div>
       {/* Start and End time */}
       <div className="p-3 flex   items-center gap-10 mt-4">
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">Start Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">08:02:24</div>
+          <div className="text-[#B49372] text-lg font-bold">{contest.startTime.split("T")[1].split(".")[0]}</div>
         </div>
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">End Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">08:02:24</div>
+          <div className="text-[#B49372] text-lg font-bold">{contest.endTime.split("T")[1].split(".")[0]}</div>
         </div>
       </div>
       {/* Main section start */}
