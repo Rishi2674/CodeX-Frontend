@@ -17,6 +17,7 @@ import Test_case_card from "./Pages/Test_case_card";
 import InputEssay from "./Pages/InputEssay";
 import InputMcq from "./Pages/InputMcq";
 import Question_page from "./Pages/Question_page";
+import ChooseOption from "./Pages/ChooseOption";
 
 function App() {
   return (
@@ -34,13 +35,14 @@ function App() {
         <Route exact path="/submitques" element={<SubmitQues />} />
         <Route exact path="/mcq" element={<Mcq />} />
         <Route exact path="/essay" element={<Essay />} />
-        <Route exact path="/ques" element={<Question_page/>}/>
+        <Route exact path="/choose" element={<ChooseOption />} />
       </Routes>
       {/* <Mcq /> */}
       {/* <UserPage /> */}
       {/* <Contest_Admin /> */}
       {/* <InputEssay /> */}
       {/* <Question_page/> */}
+      {/* <ChooseOption /> */}
     </>
   );
 }
