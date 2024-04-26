@@ -18,12 +18,11 @@ const SubmitQues = () => {
       </div>
       <div className="flex pt-8 px-4 justify-between">
         <div className="text-3xl font-bold text-gray-300 ">The XOR Problem</div>
-        <button className=" text-[#F59837]  gap-2 flex items-center justify-center font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E] mr-8">
-          <div className="text-2xl">
-            <FiUpload />
-          </div>
-          <div className="text-xl">Upload File</div>
-        </button>
+        <input 
+        placeholder="Upload file"
+        type="file"
+        accept=".cpp"
+        className=" text-[#F59837]  gap-2 flex items-center justify-center font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E] mr-8"/>
       </div>
       <div className="text-2xl text-gray-300 px-4 pt-10 ">Source code :</div>
       <div className="m-4">

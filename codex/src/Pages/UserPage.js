@@ -29,11 +29,11 @@ const UserPage = () => {
             Leaderboard
           </div>
         </Link>
-        <link to="/submissions">
+        <Link to="/submissions">
           <div className="cursor-pointer flex">
             <CgMenuCheese size={25} className="mr-2 mt-1" /> Sumbissions
           </div>
-        </link>
+        </Link>
       </div>
       <div className="text-2xl w-2/3 mx-8 flex  mt-6 text-gray-400 font-semibold justify-between">
         <p>Challenges</p>
@@ -58,11 +58,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/question">
+              <Link to="/question">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>
@@ -83,11 +83,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/question">
+              <Link to="/question">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>
@@ -108,11 +108,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/question">
+              <Link to="/question">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>
@@ -132,11 +132,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/mcq">
+              <Link to="/mcq">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>
@@ -157,11 +157,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/mcq">
+              <Link to="/mcq">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>
@@ -183,11 +183,11 @@ const UserPage = () => {
               </div>
             </div>
             <div className="">
-              <link to="/essay">
+              <Link to="/essay">
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
-              </link>
+              </Link>
             </div>
           </div>
         </div>

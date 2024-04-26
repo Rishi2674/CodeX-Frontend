@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const Submissions = () => {
+  const [submissions,setSubmissions]=useState([])
+  useEffect(()=>{
+    axios.get("http://localhost:6969/api/submission").then(response=>{
+      setSubmissions(response.data)
+      console.log(response.data)
+    })
+  })
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
@@ -32,7 +40,7 @@ const Submissions = () => {
             </div>
             <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
               <div className="flex justify-center">
-                <p>Test Cases Passed </p>
+                <p>User </p>
               </div>
             </div>
             <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
@@ -52,214 +60,42 @@ const Submissions = () => {
             </div>
           </div>
         </div>
-        {/* table */}
         <div className="h-80 overflow-scroll overflow-x-hidden mt-4">
-          <div className="flex items-center justify-center mt-4 ">
+        {
+          submissions.map(submission=>(
+            <div className="flex items-center justify-center mt-2 ">
             <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
               <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>New Keyboard</p>
+                  <p>{submission.problem.title}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>134/134 </p>
+                  <p>{submission.user.username}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>00:34:12 </p>
+                  <p>{submission.createdAt}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>50</p>
+                  <p>{submission.problem.points}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>Accepted </p>
+                  <p>{submission.result}</p>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* ...... */}
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Accepted </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Accepted </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Accepted </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Accepted </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Wrong Answer </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-1 ">
-            <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>New Keyboard</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>134/134 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>00:34:12 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>50</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>Wrong Answer </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))
+        }
+       
+          
         </div>
       </div>
     </div>
