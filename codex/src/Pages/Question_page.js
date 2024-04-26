@@ -18,12 +18,13 @@ const Question_page = () => {
   };
   const [title, Settitle] = useState(" ");
   const [description, Setdescription] = useState(" ");
-  const [difficulty, Setdifficulty] = useState(" ");
-  const [timelimit, Settimelimit] = useState(" ");
-  const [memorylimit, Setmemorylimit] = useState(" ");
-  const [points, Setpoints] = useState(" ");
+  const [difficulty, Setdifficulty] = useState(0);
+  const [timelimit, Settimelimit] = useState(0);
+  const [memorylimit, Setmemorylimit] = useState(0);
+  const [points, Setpoints] = useState(0);
   const SetQuestion = (event)=>{
     event.preventDefault();
+    Setdifficulty(parseInt(difficulty));
     const body = {
         title:title,
         description:description,
@@ -32,17 +33,28 @@ const Question_page = () => {
         memoryLimit:memorylimit,
         points:points,
       }
+      const token = localStorage.getItem("jwt");
+      console.log(token);
       console.log(body);
-      fetch("http://localhost:6969/api/login-with-otp/problem", {
+      fetch("http://localhost:6969/api/problem", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          authorization: `${token}`,
+        },
         body: JSON.stringify(body),
       })
-        .then((res) => res.text())
+        .then((res) => res.json())
         .then((res) => {
+          console.log("okay")
           console.log(res);
-          console.log(res.message);
-          window.location.href = "/otp";
+          console.log(res.status);
+          if(res.status>=200 && res.status<=300){
+            console.log("okay11");
+          }else{
+            console.log("11");
+          }
+          // window.location.href = "/otp";
           // history.push('/otp')
         })
         .catch((error) => {
@@ -93,7 +105,7 @@ const Question_page = () => {
                     className="bg-[#22243E] w-[80%] h-12 border-[1px] border-[#F59837] px-2 text-[#a2a2a2]"
                     placeholder="Write Your Problem Statement"
                     required
-                    onChange={(e) => Setdifficulty(e.target.value)}
+                    onChange={(e) => Setdescription(e.target.value)}
                   />
                 </div>
                 <div>
@@ -148,7 +160,7 @@ const Question_page = () => {
               <div>
                 <button
                   className="bg-[#22243E] text-[#F59837] px-9 py-1 rounded-md border-[1px] border-[#F59837]"
-                  onClick={plusOne}
+                  
                 >
                   NEXT
                 </button>
