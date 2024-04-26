@@ -26,7 +26,7 @@ const Example_card = ({ visible, onClose }) => {
         </div>
         <div>
           <div className="text-[#F59837] font-semibold text-2xl mb-1">
-            Output*
+            Output* 
           </div>
           <input
             className="bg-[#22243E] w-[90%] mx-4 py-2 border-[1px] border-[#F59837] px-2 text-[#a2a2a2]"
