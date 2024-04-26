@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { CgMenuCheese } from "react-icons/cg";
 import { MdLeaderboard } from "react-icons/md";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const UserPage = () => {
+  const [questions,setQuestions]=useState([]);
+  useEffect(()=>{
+    axios.get("http://localhost:6969/api/problem").then((response)=>{
+      setQuestions(response.data)
+    })
+  })
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
@@ -31,7 +38,7 @@ const UserPage = () => {
         </Link>
         <Link to="/submissions">
           <div className="cursor-pointer flex">
-            <CgMenuCheese size={25} className="mr-2 mt-1" /> Sumbissions
+            <CgMenuCheese size={25} className="mr-2 mt-1" /> Submissions
           </div>
         </Link>
       </div>
@@ -41,21 +48,19 @@ const UserPage = () => {
       </div>
 
       <div className="flex-col h-[400px] overflow-scroll mt-3 overflow-x-hidden">
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        {questions.map((question,index)=>(
+          <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">
-            New Keyboard
+            {question.title}
           </div>
 
           <div className="px-6  flex w-full items-center justify-between ">
             <div className="flex justify-between w-1/2">
               <div className="text-[#aaaaaa] flex text-xs gap-1 ">
                 <div>Max Score:</div>
-                <div className="font-bold">20</div>
+                <div className="font-bold">{question.points}</div>
               </div>
-              <div className="text-[#aaaaaa] flex text-xs gap-1">
-                <div>Success Rate: </div>
-                <div className="font-bold">67.9%</div>
-              </div>
+              
             </div>
             <div className="">
               <Link to="/question">
@@ -66,58 +71,11 @@ const UserPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
-          <div className="text-[#DA8D41] text-2xl p-5 font-bold">
-            New Keyboard
-          </div>
-
-          <div className="px-6  flex w-full items-center justify-between ">
-            <div className="flex justify-between w-1/2">
-              <div className="text-[#aaaaaa] flex text-xs gap-1 ">
-                <div>Max Score:</div>
-                <div className="font-bold">20</div>
-              </div>
-              <div className="text-[#aaaaaa] flex text-xs gap-1">
-                <div>Success Rate: </div>
-                <div className="font-bold">67.9%</div>
-              </div>
-            </div>
-            <div className="">
-              <Link to="/question">
-                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
-          <div className="text-[#DA8D41] text-2xl p-5 font-bold">
-            New Keyboard
-          </div>
-
-          <div className="px-6  flex w-full items-center justify-between ">
-            <div className="flex justify-between w-1/2">
-              <div className="text-[#aaaaaa] flex text-xs gap-1 ">
-                <div>Max Score:</div>
-                <div className="font-bold">20</div>
-              </div>
-              <div className="text-[#aaaaaa] flex text-xs gap-1">
-                <div>Success Rate: </div>
-                <div className="font-bold">67.9%</div>
-              </div>
-            </div>
-            <div className="">
-              <Link to="/question">
-                <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
-                  <div className="text-[#aaaaaa]  ">Solve challenge </div>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        ))}
+        
+        
         {/* mcq */}
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">MCQ 1</div>
 
           <div className="px-6  flex w-full items-center justify-between ">
@@ -139,10 +97,10 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* mcq */}
         {/* mcq */}
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">MCQ 2</div>
 
           <div className="px-6  flex w-full items-center justify-between ">
@@ -164,9 +122,9 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* mcq */}
-        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">
             Essay Type 1
           </div>
@@ -190,7 +148,7 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

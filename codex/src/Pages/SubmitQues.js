@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assets/logo.png";
 import { FiUpload } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import axios from "axios"
 const SubmitQues = () => {
+  const [code, setCode] = useState(null);
+  function handleSubmit(event){
+    event.preventDefault();
+    if (code) {
+      const formData = new FormData();
+      formData.append('code',code,code.name);
+      formData.append();
+      axios.post("http://localhost:6969/api/submission/",formData,{
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'Authorization':  localStorage.getItem('jwt')
+        }
+    })
+      console.log(formData);
+  }
+
+  }
   return (
     <div className="bg-[#01042D] h-screen">
       <div>

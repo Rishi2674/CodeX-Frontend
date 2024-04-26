@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../Assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 function DisplayQues() {
+  const {id}=useParams();
   return (
     <div className="bg-[#01042D]  h-screen overflow-x-hidden overflow-scroll">
       <div className="justify-between flex border-b-2  border-b-[#707070]">
