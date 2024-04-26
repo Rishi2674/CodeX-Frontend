@@ -13,6 +13,8 @@ import SignUp from "./Pages/SignUp";
 import { Routes, Route } from "react-router-dom";
 import Mcq from "./Pages/Mcq";
 import Essay from "./Pages/Essay";
+import Test_case_card from "./Pages/Test_case_card";
+import InputEssay from "./Pages/InputEssay";
 
 function App() {
   return (
@@ -24,7 +26,8 @@ function App() {
       </Routes> */}
       {/* <Mcq /> */}
       {/* <UserPage /> */}
-      <Contest_Admin />
+      {/* <Contest_Admin /> */}
+      <InputEssay />
     </>
   );
 }
