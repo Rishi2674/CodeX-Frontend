@@ -47,8 +47,10 @@ const UserPage = () => {
         <p>2hr 45mins</p>
       </div>
 
-      <div className="flex-col h-[400px] overflow-scroll mt-3 overflow-x-hidden">
-        {questions.map((question,index)=>(
+      <div className="flex-col h-[600px] overflow-scroll mt-3 overflow-x-hidden">
+        {questions.map((question,index)=>{
+          const id=question._id
+          return (
           <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">
             {question.title}
@@ -63,7 +65,7 @@ const UserPage = () => {
               
             </div>
             <div className="">
-              <Link to="/question">
+              <Link to={`/question/${id}`}>
                 <button className="bg-[#B64320] flex justify-center  rounded-lg py-1 px-3 hover:scale-105 duration-300 w-[10rem]">
                   <div className="text-[#aaaaaa]  ">Solve challenge </div>
                 </button>
@@ -71,7 +73,7 @@ const UserPage = () => {
             </div>
           </div>
         </div>
-        ))}
+        )})}
         
         
         {/* mcq */}
