@@ -24,7 +24,7 @@ function App() {
       </Routes> */}
       {/* <Mcq /> */}
       {/* <UserPage /> */}
-      <Essay />
+      <Contest_Admin />
     </>
   );
 }

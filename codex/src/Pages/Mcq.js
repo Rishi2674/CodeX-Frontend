@@ -16,7 +16,7 @@ const Mcq = () => {
         </div>
       </div>
       <div className="grid grid-cols-2 ">
-        <div className="h- border-r-2 border-r-[#707070] text-[#D68536] p-8 text-lg">
+        <div className="h- border-r-2 border-r-[#707070] text-[#adadad] p-8 text-lg">
           Two spherical stars A and B have densities ρA and ρB,
           respectively. A and B have the same radius, and their
           masses MA and MB are related by MB = 2MA. Due to an interaction
@@ -28,70 +28,70 @@ const Mcq = () => {
           ratio.
         </div>
         <div className="p-8 text-xl">
-          <ul className="text-[#D68536] h-[27rem]">
-            <li className="">
-              <div className="flex items-center ps-3">
+          <ul class="text-[#D68536] h-[27rem]">
+            <li class="">
+              <div class="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  className="w-4 h-4"
+                  class="w-6 h-6"
                 />
                 <label
                   for="list-radio-license"
-                  className=" pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  class=" pl-4 py-3 ms-2 text-2xl font-medium text-[#dedede]"
                 >
                   12 34 12 43
                 </label>
               </div>
             </li>
-            <li className="w-full rounded-t-lg ">
-              <div className="flex items-center ps-3">
+            <li class="w-full rounded-t-lg ">
+              <div class="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  className="w-4 h-4 text-[#D68536] border-[#D68536] "
+                  class=" w-6 h-6 border-[#D68536] "
                 />
                 <label
                   for="list-radio-license"
-                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#dedede]"
                 >
                   23 64 72 13
                 </label>
               </div>
             </li>
-            <li className="w-full  rounded-t-lg ">
-              <div className="flex items-center ps-3">
+            <li class="w-full  rounded-t-lg ">
+              <div class="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  className="w-4 h-4 text-[#D68536] border-[#D68536]"
+                  class="w-6 h-6 text-[#D68536] border-[#D68536]"
                 />
                 <label
                   for="list-radio-license"
-                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#dedede]"
                 >
                   22 34 19 4
                 </label>
               </div>
             </li>
-            <li className="w-full =rounded-t-lg ">
-              <div className="flex items-center ps-3">
+            <li class="w-full =rounded-t-lg ">
+              <div class="flex items-center ps-3">
                 <input
                   id="list-radio-license"
                   type="radio"
                   value=""
                   name="list-radio"
-                  className="w-4 h-4 text-[#D68536]"
+                  class="w-6 h-6  text-[#D68536]"
                 />
                 <label
                   for="list-radio-license"
-                  className="pl-4 py-3 ms-2 text-2xl font-medium text-[#D68536]"
+                  class="pl-4 py-3 ms-2 text-2xl font-medium text-[#dedede]"
                 >
                   8 12 92 18
                 </label>
