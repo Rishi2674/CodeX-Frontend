@@ -11,22 +11,16 @@ import UserPage from "./Pages/UserPage";
 import LandingPage from "./Pages/LandingPage";
 import SignUp from "./Pages/SignUp";
 import { Routes, Route } from "react-router-dom";
-<<<<<<< Updated upstream
 import Mcq from "./Pages/Mcq";
 import Essay from "./Pages/Essay";
 import Test_case_card from "./Pages/Test_case_card";
 import InputEssay from "./Pages/InputEssay";
 import InputMcq from "./Pages/InputMcq";
-=======
-import Mcq from './Pages/Mcq'
-import Question_page from "./Pages/Question_page";
->>>>>>> Stashed changes
 
 function App() {
   return (
     <>
       <Routes>
-<<<<<<< Updated upstream
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<SignUp />} />
@@ -38,14 +32,6 @@ function App() {
       {/* <UserPage /> */}
       {/* <Contest_Admin /> */}
       {/* <InputEssay /> */}
-=======
-      <Route exact path = '/' element = {<LandingPage/>} />
-      <Route exact path = '/login' element = {<Login />} />
-      <Route exact path = '/register' element = {<SignUp/>}/>
-    </Routes>
-      {/* <Mcq /> */}
-      <Question_page/>
->>>>>>> Stashed changes
     </>
   );
 }
