@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assets/logo.png";
+import { FaHandHolding } from "react-icons/fa";
 
 const CreateContest = () => {
+
+  const [name,setName] = useState("");
+  const [date,setDate] = useState(Date.now());
+  const [duration, setDuration] = useState("");
+  const [starttime, setStarttime] = useState("");
+  const [endtime, setEndtime] = useState("");
+  const [guidelines, setGuidelines] = useState("");
+
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    const data = {
+      title: name,
+      guidelines: guidelines,
+      startTime: starttime,
+      endTime: endtime,
+      date: date,
+    }
+    const token= localStorage.getItem("jwt");
+     try {
+      await fetch('http://localhost:6969/api/contest',
+      {
+          method: 'POST',
+          headers: {
+              'Content-Type' : 'application/json;charset=utf-8',
+              'authorization' : `${token}`
+          },
+          body : JSON.stringify(data),
+      })
+      .then(res=>res.json()).then((result)=>{
+          console.log(result);
+          window.location.replace('/admin')
+      })
+     } catch (error) {
+        console.log("error",error)
+     }
+  }
+  
+
+
   return (
     <div className="bg-[#01042D]">
       {/* Logo start */}
@@ -18,6 +58,7 @@ const CreateContest = () => {
         </div>
       </div>
       {/* Main content start */}
+      <form onSubmit={handleSubmit} >
       <div className="p-4 mt-8">
         {/* COontest Name */}
         <div className="flex-col">
@@ -27,6 +68,10 @@ const CreateContest = () => {
           <div className="mt-2">
             <input
               type="text"
+              required
+              onChange={(e)=>{
+                setName(e.target.value)
+              }}
               placeholder="Enter the name of contest"
               className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-2/3 rounded-lg p-2  border-none text-[#B49372] h-10"
             ></input>
@@ -43,6 +88,10 @@ const CreateContest = () => {
               <input
                 type="date"
                 placeholder=" 📅 08/05/24"
+                required
+                onChange={(e)=>{
+                  setDate(e.target.value)
+                }}
                 className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-full rounded-lg p-2 border-none text-[#B49372] h-10"
               ></input>
             </div>
@@ -55,6 +104,9 @@ const CreateContest = () => {
             <div className="mt-2">
               <input
                 type="time"
+                onChange={(e)=>{
+                  setDuration(e.target.value)
+                }}
                 placeholder="⌛ 2 hours 45 minutes"
                 className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-full rounded-lg p-2 border-none text-[#B49372] h-10"
               ></input>
@@ -71,6 +123,10 @@ const CreateContest = () => {
             <div className="mt-2">
               <input
                 type="time"
+                required
+                onChange={(e)=>{
+                  setStarttime(e.target.value)
+                }}
                 placeholder="Enter the name of contest here"
                 className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-full rounded-lg p-2 border-none text-[#B49372] h-10"
               ></input>
@@ -83,7 +139,11 @@ const CreateContest = () => {
             </div>
             <div className="mt-2">
               <input
+              required
                 type="time"
+                onChange={(e)=>{
+                  setEndtime(e.target.value)
+                }}
                 placeholder="Enter the name of contest here"
                 className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-full rounded-lg p-2 border-none text-[#B49372] h-10"
               ></input>
@@ -98,6 +158,10 @@ const CreateContest = () => {
           <div className="mt-2">
             <input
               type="text"
+              required
+              onChange={(e)=>{
+                setEndtime(e.target.value)
+              }}
               placeholder="Enter the guidelines for contest"
               className=" placeholder:text-[#B49372] placeholder:text-sm placeholder:ml-2 bg-[#22243E] w-2/3 rounded-lg p-2 border-none text-[#B49372] h-10"
             ></input>
@@ -105,7 +169,9 @@ const CreateContest = () => {
         </div>
         {/* Create and Cancel buttons */}
         <div className="flex mt-12 gap-8">
-          <button className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
+          <button 
+          type="submit"
+          className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
             CREATE
           </button>
           <button className="text-[#F59837] text-2xl font-medium border-[#F59837] border-[1px] w-[250px] rounded-lg p-1 hover:scale-110 duration-300 hover:bg-[#22243E]">
@@ -113,6 +179,7 @@ const CreateContest = () => {
           </button>
         </div>
       </div>
+      </form>
     </div>
   );
 };

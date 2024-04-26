@@ -19,15 +19,18 @@ import InputEssay from "./Pages/InputEssay";
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<SignUp />} />
-      </Routes> */}
+        <Route exact path = "/create" element={<CreateContest/>}/>
+        <Route exact path = '/admin' element={<Contest_Admin/>} />
+        <Route exact path = '/contest' element = {<UserPage/>} />
+      </Routes>
       {/* <Mcq /> */}
       {/* <UserPage /> */}
       {/* <Contest_Admin /> */}
-      <InputEssay />
+      {/* <InputEssay /> */}
     </>
   );
 }
