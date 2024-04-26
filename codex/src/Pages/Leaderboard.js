@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
+import axios from "axios"
 const Leaderboard = () => {
+  const [leaderboard,setLeaderbaord]=useState([]);
+  useEffect(()=>{
+    axios.get("http://localhost:6969/api/leaderboard/").then(response=>{
+      setLeaderbaord(response.data.leaderboard)
+    })
+  })
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
@@ -52,448 +59,33 @@ const Leaderboard = () => {
                 <p>Total score </p>
               </div>
             </div>
-            <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>Last AC </p>
-              </div>
-            </div>
-            <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>P1 </p>
-              </div>
-            </div>
-            <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>P2 </p>
-              </div>
-            </div>
-            <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>P3 </p>
-              </div>
-            </div>
-            <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>P4 </p>
-              </div>
-            </div>
-            <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-              <div className="flex justify-center">
-                <p>P5 </p>
-              </div>
-            </div>
           </div>
         </div>
         <div className="h-80 overflow-scroll overflow-x-hidden mt-4">
-          {/* table */}
+          {/* table */
+          
+          leaderboard.map((entry,index)=>(
           <div className="flex items-center justify-center mt-1  ">
             <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
               <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>1100 </p>
+                  <p>{index+1}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>rishika_g31</p>
+                  <p>{entry.username}</p>
                 </div>
               </div>
               <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
                 <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
+                  <p>{entry.currentPoints} </p>
                 </div>
               </div>
             </div>
           </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
-          {/* table */}
-          <div className="flex items-center justify-center mt-1  ">
-            <div className="flex justify-center  rounded-lg p-1  bg-[#1B243C] w-11/12  md:mt-2">
-              <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1100 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px]  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>rishika_g31</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>80 </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>1:05:20</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>- </p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100 border-r-[1px] p-2  md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>+</p>
-                </div>
-              </div>
-              <div className="w-full text-gray-100  p-2 md:text-[20px] sm:text-[15px] text-[13px]">
-                <div className="flex justify-center">
-                  <p>-</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ...... */}
+    ))}
+          
         </div>
       </div>
     </div>
