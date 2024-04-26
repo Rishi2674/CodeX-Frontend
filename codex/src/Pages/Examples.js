@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Example_card from "./Example_card";
-
+import { Link } from "react-router-dom";
 const Examples = () => {
   const [showMyModel, setShowMyModal] = useState(false);
   const handleOnClose = () => setShowMyModal(false);
