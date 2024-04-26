@@ -16,6 +16,7 @@ import Essay from "./Pages/Essay";
 import Test_case_card from "./Pages/Test_case_card";
 import InputEssay from "./Pages/InputEssay";
 import InputMcq from "./Pages/InputMcq";
+import Question_page from "./Pages/Question_page";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       {/* <UserPage /> */}
       {/* <Contest_Admin /> */}
       {/* <InputEssay /> */}
+      <Question_page/>
     </>
   );
 }
