@@ -16,7 +16,7 @@ const fetchdata = async() =>{
             console.log(result[0]);
             setContest(result[0]);
             
-            localStorage.setItem("contestdetails",result[0])
+            // localStorage.setItem("contestdetails",result[0])
 
             console.log("contest details",contest)
         })
@@ -25,7 +25,9 @@ const fetchdata = async() =>{
     }
 }
 
-fetchdata();
+useEffect(() => {
+    fetchdata();
+}, []);
 
     return (
         <ContestContext.Provider value={[contest, setContest]}>

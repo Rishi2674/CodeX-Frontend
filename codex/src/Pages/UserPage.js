@@ -19,7 +19,7 @@ const UserPage = () => {
 
       <div className="mt-3">
         <div className="text-5xl text-[#D68536] font-bold p-4 border-b-2 border-b-[#707070]">
-          Hack The interview
+          {contest.title}
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const UserPage = () => {
       </div>
 
       <div className="flex-col h-[600px] overflow-scroll mt-3 overflow-x-hidden">
-        {questions.map((question,index)=>{
+        {/* {questions.map((question,index)=>{
           const id=question._id
           return (
           <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
@@ -71,10 +71,10 @@ const UserPage = () => {
           </div>
         </div>
         )})}
-        
+         */}
         
         {/* mcq */}
-        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">MCQ 1</div>
 
           <div className="px-6  flex w-full items-center justify-between ">
@@ -96,10 +96,10 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* mcq */}
         {/* mcq */}
-        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">MCQ 2</div>
 
           <div className="px-6  flex w-full items-center justify-between ">
@@ -121,9 +121,9 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* mcq */}
-        {/* <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
+        <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
           <div className="text-[#DA8D41] text-2xl p-5 font-bold">
             Essay Type 1
           </div>
@@ -147,7 +147,7 @@ const UserPage = () => {
               </Link>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

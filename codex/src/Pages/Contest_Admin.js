@@ -11,11 +11,11 @@ const Contest_Admin = () => {
   const [ifBold2, setIfBold2] = useState("B49372");
   const [ifBold3, setIfBold3] = useState("B49372");
   const [status, setStatus] = useState("problem");
-  // const [contest,setContest] = useContext(ContestContext);
+  const [contest,setContest] = useContext(ContestContext);
   const [leaderboard,setLeaderbaord]=useState([]);
   // console.log("contest",contest)
 
-   const contest = localStorage.getItem("contestdetails")
+   //const contest = localStorage.getItem("contestdetails")
 console.log("contest",contest)
 
 
@@ -61,10 +61,10 @@ console.log("contest",contest)
       {/* Heading */}
       <div className="flex justify-between   items-center p-3 mt-6">
         <div className="text-[#D68536] text-4xl font-bold">
-          Hack The interview
+          {contest.title}
         </div>
         <div className="text-[#B49372] text-2xl font-semibold ">
-          {contest.date - Date.now()}
+          {contest.date.split('T')[0]}
         </div>
       </div>
       {/* Date and Calender Time */}
@@ -72,17 +72,17 @@ console.log("contest",contest)
         <div className="text-[#D68536] text-4xl font-bold">
           <IoCalendarClear />
         </div>
-        <div className="text-[#B49372] text-2xl font-bold ml-2">08-12-24</div>
+        <div className="text-[#B49372] text-2xl font-bold ml-2">{contest.date.split('T')[0]}</div>
       </div>
       {/* Start and End time */}
       <div className="p-3 flex   items-center gap-10 mt-4">
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">Start Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">12:00</div>
+          <div className="text-[#B49372] text-lg font-bold">{contest.startTime.split('T')[1].split('.')[0]}</div>
         </div>
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">End Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">14:00</div>
+          <div className="text-[#B49372] text-lg font-bold">{contest.endTime.split('T')[1].split('.')[0]}</div>
         </div>
       </div>
       {/* Main section start */}
@@ -285,8 +285,9 @@ console.log("contest",contest)
           {/* guidelines button */}
           <div className="text-[#B49372] p-4 font-semibold text-xl">
             <div>The registration confirms that you:</div>
+            {contest.guidelines}
 
-            <div className="mt-4">* have read the contest rules</div>
+            {/* <div className="mt-4">* have read the contest rules</div>
             <div className="mt-1">* will not violate the rules</div>
             <div className="mt-1">
               * will not communicate with other participants, use another
@@ -300,7 +301,7 @@ console.log("contest",contest)
             <div className="mt-1">
               * will not use multiple accounts and will take part in the contest
               using your personal and the single account.
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

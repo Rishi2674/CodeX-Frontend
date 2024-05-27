@@ -26,7 +26,7 @@ const Submissions = () => {
 
       <div className="mt-3">
         <div className="text-5xl text-[#D68536] font-bold p-4 border-b-2 border-b-[#707070]">
-          Hack The Interview
+          {contest.title}
         </div>
       </div>
       <div className=" p-4 mt-6">
