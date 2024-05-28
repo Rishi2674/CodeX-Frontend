@@ -33,7 +33,7 @@ const CreateContest = () => {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
+          console.log("contest created with details: ",result);
           console.log("success in creation")
           //window.location.replace('/admin')
       })

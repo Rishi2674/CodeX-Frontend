@@ -11,12 +11,15 @@ const Contest_Admin = () => {
   const [ifBold2, setIfBold2] = useState("B49372");
   const [ifBold3, setIfBold3] = useState("B49372");
   const [status, setStatus] = useState("problem");
-  const [contest,setContest] = useContext(ContestContext);
+  const { contest, loading } = useContext(ContestContext);
   const [leaderboard,setLeaderbaord]=useState([]);
-  // console.log("contest",contest)
+  if (loading) {
+    return <div>loading...</div>;
+  }
+  console.log("contest admin",contest)
 
    //const contest = localStorage.getItem("contestdetails")
-console.log("contest",contest)
+// console.log("contest",contest)
 
 
   const handleProblemChange = () => {

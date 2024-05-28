@@ -5,30 +5,24 @@ export const ContestContext = createContext();
 
 export const ContestContextProvider = (props) => {
     const [contest, setContest] = useState({});
-console.log("COONTEST: ",contest)
-    
-const fetchdata = async() =>{
-    try {
-        await fetch('http://localhost:6969/api/contest/',{
+    // console.log("COONTEST: ",contest)
+
+    const fetchdata = () => {
+        fetch('http://localhost:6969/api/contest/', {
             method: "GET"
         })
-        .then(res=>res.json()).then((result)=>{
-            console.log(result[0]);
-            setContest(result[0]);
-            
-            // localStorage.setItem("contestdetails",result[0])
-
-            console.log("contest details",contest)
-        })
-    } catch (error) {
-        console.log("error",error);
+            .then(response => response.json())
+            .then(result => {
+                console.log("fetched results", result[0]);
+                setContest(result[0]);
+            })
+            .catch(error => console.log("error", error));
     }
-}
 
-useEffect(() => {
-    fetchdata();
-}, []);
+    useEffect(() => {
+        fetchdata();
 
+    }, []);
     return (
         <ContestContext.Provider value={[contest, setContest]}>
             {props.children}
