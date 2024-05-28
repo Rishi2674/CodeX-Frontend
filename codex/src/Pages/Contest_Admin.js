@@ -11,16 +11,12 @@ const Contest_Admin = () => {
   const [ifBold2, setIfBold2] = useState("B49372");
   const [ifBold3, setIfBold3] = useState("B49372");
   const [status, setStatus] = useState("problem");
-  const { contest, loading } = useContext(ContestContext);
-  const [leaderboard,setLeaderbaord]=useState([]);
-  if (loading) {
-    return <div>loading...</div>;
-  }
-  console.log("contest admin",contest)
+  const [contest, setContest] = useContext(ContestContext);
+  const [leaderboard, setLeaderbaord] = useState([]);
+  // console.log("contest",contest)
 
-   //const contest = localStorage.getItem("contestdetails")
-// console.log("contest",contest)
-
+  //const contest = localStorage.getItem("contestdetails")
+  console.log("contest", contest);
 
   const handleProblemChange = () => {
     setIfBold1("D68536");
@@ -63,11 +59,9 @@ const Contest_Admin = () => {
       </div>
       {/* Heading */}
       <div className="flex justify-between   items-center p-3 mt-6">
-        <div className="text-[#D68536] text-4xl font-bold">
-          {contest.title}
-        </div>
+        <div className="text-[#D68536] text-4xl font-bold">{contest.title}</div>
         <div className="text-[#B49372] text-2xl font-semibold ">
-          {contest.date.split('T')[0]}
+          {contest.date?contest.date.split("T")[0]:""}
         </div>
       </div>
       {/* Date and Calender Time */}
@@ -75,17 +69,23 @@ const Contest_Admin = () => {
         <div className="text-[#D68536] text-4xl font-bold">
           <IoCalendarClear />
         </div>
-        <div className="text-[#B49372] text-2xl font-bold ml-2">{contest.date.split('T')[0]}</div>
+        <div className="text-[#B49372] text-2xl font-bold ml-2">
+          {contest.date?contest.date.split("T")[0]:""}
+        </div>
       </div>
       {/* Start and End time */}
       <div className="p-3 flex   items-center gap-10 mt-4">
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">Start Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">{contest.startTime.split('T')[1].split('.')[0]}</div>
+          <div className="text-[#B49372] text-lg font-bold">
+            {contest.startTime?contest.startTime.split("T")[1].split(".")[0]:""}
+          </div>
         </div>
         <div className="flex items-center">
           <div className="text-[#D68536] text-lg font-bold">End Time-</div>
-          <div className="text-[#B49372] text-lg font-bold">{contest.endTime.split('T')[1].split('.')[0]}</div>
+          <div className="text-[#B49372] text-lg font-bold">
+            {contest.endTime?contest.endTime.split("T")[1].split(".")[0]:""}
+          </div>
         </div>
       </div>
       {/* Main section start */}
