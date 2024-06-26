@@ -1,12 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import { CgMenuCheese } from "react-icons/cg";
 import { MdLeaderboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { ContestContext } from "./ContestContextProvider";
+import axios from "axios";
 
 const UserPage = () => {
   const [contest,setContest] = useContext(ContestContext);
+  const [questions,setQuestions]=useState([]);
+  useEffect(()=>{
+    try{
+      axios.get("http://localhost:6969/api/problem").then((response)=>{
+        setQuestions(response.body.problems);
+      })
+    }
+    catch(error){
+      console.log(error)
+    }
+  });
+  
   console.log("contest",contest)
   return (
     <div className="bg-[#01042D] h-screen ">
@@ -45,7 +58,7 @@ const UserPage = () => {
       </div>
 
       <div className="flex-col h-[600px] overflow-scroll mt-3 overflow-x-hidden">
-        {/* {questions.map((question,index)=>{
+        {questions.map((question,index)=>{
           const id=question._id
           return (
           <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">
@@ -71,7 +84,7 @@ const UserPage = () => {
           </div>
         </div>
         )})}
-         */}
+        
         
         {/* mcq */}
         <div className="w-2/3 h-[7.5rem] bg-[#282D36]  rounded-lg mt-2 mx-8">

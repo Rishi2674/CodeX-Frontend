@@ -6,11 +6,6 @@ import { useState } from 'react';
 
 function Login() {
 
-  const admin_email = "devamydesai@gmail.com";
-  const admin_password = "dd2904";
-
-  const [email, setEmail] = useState(" ");
-  const [password,setPassword] = useState(" ");
   
   const handleSubmit = async(e)=>{
     e.preventDefault()
