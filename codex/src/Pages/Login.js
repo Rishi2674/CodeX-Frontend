@@ -31,7 +31,7 @@ function Login() {
             .then(res=>res.json()).then((result)=>{
                 console.log(result);
                 localStorage.setItem('jwt',result.token);
-                if(data.email===admin_email && data.password===admin_password){
+                if(data.admin===0){
                   window.location.replace('/create')
                 }
                 else{
