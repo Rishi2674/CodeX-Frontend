@@ -12,7 +12,7 @@ const UserPage = () => {
   useEffect(()=>{
     try{
       axios.get("http://localhost:6969/api/problem").then((response)=>{
-        console.log(response)
+        // console.log(response)
         setQuestions(response.data);
       })
     }

@@ -8,10 +8,11 @@ const Leaderboard = () => {
   const [leaderboard,setLeaderbaord]=useState([]);
   const [contest,setContest] = useContext(ContestContext);
   useEffect(()=>{
-    axios.get("http://localhost:6969/api/leaderboard/").then(response=>{
+    axios.get("http://localhost:6969/api/leaderboard/").then((response)=>{
+      // console.log(response.data)
       setLeaderbaord(response.data.leaderboard)
     })
-  })
+  },[])
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
