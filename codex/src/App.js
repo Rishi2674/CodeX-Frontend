@@ -31,7 +31,7 @@ function App() {
         <Route path="/question/:id" element={<DisplayQues />} />
         <Route exact path="/leaderboard" element={<Leaderboard />} />
         <Route exact path="/submissions" element={<Submissions />} />
-        <Route exact path="/submitques" element={<SubmitQues />} />
+        <Route exact path="/submitques/:id" element={<SubmitQues />} />
         <Route exact path="/mcq" element={<Mcq />} />
         <Route exact path="/essay" element={<Essay />} />
         <Route exact path="/ques" element={<Question_page/>}/>

@@ -12,7 +12,7 @@ const Submissions = () => {
       setSubmissions(response.data)
       console.log(response.data)
     })
-  })
+  },[])
   return (
     <div className="bg-[#01042D] h-screen ">
       <div>
@@ -65,7 +65,7 @@ const Submissions = () => {
         </div>
         <div className="h-80 overflow-scroll overflow-x-hidden mt-4">
         {
-          submissions.map(submission=>(
+          submissions.toReversed().map(submission=>(
             <div className="flex items-center justify-center mt-2 ">
             <div className="flex justify-center  rounded-lg p-1 bg-[#1B243C] w-11/12  md:mt-2">
               <div className="w-full text-gray-100 border-r-[1px] p-2 md:text-[20px] sm:text-[15px] text-[13px]">

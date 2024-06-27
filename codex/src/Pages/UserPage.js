@@ -19,7 +19,7 @@ const UserPage = () => {
     catch(error){
       console.log(error)
     }
-  });
+  },[]);
   
   console.log("contest",contest)
   return (

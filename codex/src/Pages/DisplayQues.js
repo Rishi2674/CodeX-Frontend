@@ -9,7 +9,7 @@ function DisplayQues() {
     axios.get(`http://localhost:6969/api/problem/${id}`).then((response)=>{
       setQuestion(response.data)
     })
-  })
+  },[])
   return (
     <div className="bg-[#01042D]  h-screen overflow-x-hidden overflow-scroll">
       <div className="justify-between flex border-b-2  border-b-[#707070]">
@@ -27,7 +27,7 @@ function DisplayQues() {
         <Link to="/contest">
           <p className="cursor-pointer">Problems</p>
         </Link>
-        <Link to="/submitques">
+        <Link to={`/submitques/${id}`}>
           <p className="cursor-pointer">Submit</p>
         </Link>
         <Link to="/leaderboard">
